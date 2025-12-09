@@ -1,0 +1,64 @@
+body {
+  background: #0f0f14;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #c084fc;
+}
+
+.wheel-container {
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+}
+
+.pointer {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 35px solid #a78bfa;
+  filter: drop-shadow(0 0 10px #7c3aed);
+  z-index: 10;
+}
+
+#spinBtn {
+  margin-top: 25px;
+  padding: 14px 24px;
+  background: linear-gradient(#7c3aed, #5b21b6);
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#downloadBtn {
+  margin-top: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 0;
+  color: white;
+  background: linear-gradient(#22c55e, #15803d);
+  cursor: pointer;
+}
