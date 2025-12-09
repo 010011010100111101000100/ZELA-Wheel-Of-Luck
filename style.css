@@ -1,64 +1,76 @@
 body {
-  background: #0f0f14;
+  background: #0b0b0f;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  padding: 25px;
+  margin: 20px;
 }
 
-h1 {
-  font-size: 36px;
+.title {
+  font-size: 32px;
+  text-shadow: 0 0 20px #00f0ff;
+}
+
+.instructions {
   margin-bottom: 20px;
-  color: #c084fc;
+  opacity: 0.8;
 }
 
-.wheel-container {
+#wheel-wrapper {
   position: relative;
-  margin: 0 auto;
-  width: 500px;
-  height: 500px;
+  display: inline-block;
 }
 
-.pointer {
-  position: absolute;
-  left: 50%;
-  bottom: -15px;
-  transform: translateX(-50%);
+#wheel {
+  border-radius: 50%;
+  box-shadow: 0 0 30px #0099ff, inset 0 0 20px #0077cc;
+}
+
+#pointer {
   width: 0;
   height: 0;
-  border-left: 22px solid transparent;
-  border-right: 22px solid transparent;
-  border-bottom: 35px solid #a78bfa;
-  filter: drop-shadow(0 0 10px #7c3aed);
-  z-index: 10;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 40px solid #ff0066;
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 0 8px #ff1a8c);
 }
 
-#spinBtn {
+#spin-btn {
   margin-top: 25px;
-  padding: 14px 24px;
-  background: linear-gradient(#7c3aed, #5b21b6);
+  padding: 15px 40px;
+  background: linear-gradient(45deg, #ff00cc, #9900ff);
   color: white;
-  border: 0;
-  border-radius: 10px;
-  cursor: pointer;
+  border: none;
   font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 0 15px #8000ff;
 }
 
-#status {
+#spin-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #c000ff;
+}
+
+#spins-left {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+#download-prize {
+  display: inline-block;
   margin-top: 20px;
-  font-size: 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-#downloadBtn {
-  margin-top: 10px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  border: 0;
-  color: white;
-  background: linear-gradient(#22c55e, #15803d);
-  cursor: pointer;
+  padding: 12px 30px;
+  background: gold;
+  color: black;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px gold;
 }
