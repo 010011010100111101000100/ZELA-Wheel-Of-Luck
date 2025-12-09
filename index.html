@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ZELA Wheel Of Luck</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1 class="logo">ZELA <span class="glow">Wheel Of Luck</span></h1>
+    <p class="subtitle">5 spins per day • Gold = GRAND prize • Purple = +5 spins • Grey = Try Again</p>
+  </header>
+
+  <main class="main">
+    <div class="wheel-column">
+      <div class="wheel-area">
+        <canvas id="wheel" width="700" height="700" aria-label="Prize wheel"></canvas>
+        <div id="pointer" aria-hidden="true" class="pointer"></div>
+      </div>
+
+      <div class="center-ui">
+        <button id="spinBtn" class="btn spin">SPIN</button>
+        <div id="spinsLeft" class="spins-left">Spins left today: —</div>
+        <div id="resultMsg" class="result-msg" aria-live="polite"></div>
+        <a id="downloadLink" style="display:none" class="download-btn">Download Prize File (.zela)</a>
+      </div>
+    </div>
+
+    <aside class="info-panel">
+      <div class="card neon">
+        <h3>How to claim</h3>
+        <p>When you win the grand prize, download the .zela file and visit the ZELA Prize Verify site to verify your token.</p>
+        <ul>
+          <li>1-in-100 chance for GRAND</li>
+          <li>10 segments give +5 spins</li>
+          <li>Wheel uses signed tokens from a signing server</li>
+        </ul>
+      </div>
+
+      <div class="card neon">
+        <h3>Tips</h3>
+        <p>Spin with confidence — the wheel has strong momentum and neon effects for style.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">© ZELA</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
