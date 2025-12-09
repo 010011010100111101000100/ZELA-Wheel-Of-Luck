@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
   <title>ZELA Wheel Of Luck</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>ZELA Wheel Of Luck</h1>
+  <h1 class="title">ZELA Wheel Of Luck</h1>
+  <p class="instructions">
+    Spin the wheel! You get <strong>5 spins every day</strong>.<br>
+    Gold = GRAND PRIZE • Purple = +5 Spins • Grey = Try Again
+  </p>
 
-  <div class="wheel-container">
-    <canvas id="wheel" width="500" height="500"></canvas>
-
-    <!-- Pointer at bottom -->
-    <div class="pointer"></div>
+  <div id="wheel-wrapper">
+      <div id="pointer"></div>
+      <canvas id="wheel" width="500" height="500"></canvas>
   </div>
 
-  <button id="spinBtn">SPIN</button>
+  <button id="spin-btn">SPIN</button>
 
-  <p id="status"></p>
+  <p id="spins-left"></p>
 
-  <div id="downloadBox" class="hidden">
-    <button id="downloadBtn">Download Prize Ticket (.txt)</button>
-  </div>
+  <a id="download-prize" style="display:none;">Download Prize Code</a>
 
-  <script src="wheel.js"></script>
+  <p class="copyright">© ZELA</p>
+
+  <audio id="sound-click" src="click.mp3"></audio>
+  <audio id="sound-spin" src="spin.mp3"></audio>
+  <audio id="sound-win" src="win.mp3"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
